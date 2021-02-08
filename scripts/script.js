@@ -1,5 +1,16 @@
 let cart = [];
 
+// VAlidación del storage//
+
+if (localStorage.getItem("cart") != null) {
+    console.log("Get into validation");
+    let cartValues = JSON.parse(localStorage.getItem("cart"));
+    cart = cartValues;
+    document.getElementById("counter").innerHTML = cart.length;
+}
+// Validación del storage//
+
+
 class Product {
     constructor(
         productType,
@@ -60,10 +71,10 @@ for (let i = 0; i < dataBase.length; i++) {
     <img class="card-img-top" src="${dataBase[i].picture}" alt="Product Picture" class="img-fluid" height="300px" width="354px">
     <div class="card-body">
     <h1 class="card-title">${dataBase[i].type}</h1>
-    <h2 class="card-brand">${dataBase[i].brand}</h2>
-    <h3 class="card-fabric">${dataBase[i].fabric}</h3>
-    <h3 class="card-price">${dataBase[i].price}</h3>
-    <h3 class="card-stock">${dataBase[i].stock}</h3>
+    <h5 class="card-brand"><p>${dataBase[i].brand}</p></h5>
+    <h4 class="card-fabric"><p class="product-fabric">Fabric:    <strong>${dataBase[i].fabric}</strong></p></h4>
+    <h3 class="card-price"><p class="product-items">Precio:      <strong> ${dataBase[i].price}</strong></p></h3>
+    <h3 class="card-stock"><p class="product-stock">Stock:        <strong> ${dataBase[i].stock}</strong></p></h3>
     </div>
     <div class="card-footer">
     <a href="#" class="btn btn-primary" onclick='addToTheCart(${JSON.stringify(dataBase[i])})'>Add to the Cart</a>
@@ -71,41 +82,43 @@ for (let i = 0; i < dataBase.length; i++) {
     </div>
     </div>
     `;
+    } else {
+        aux += `
+        <p>Out Of Stock</p>`;
     }
 
 }
 document.getElementById("products").innerHTML = aux;
 
-// VAlidación del storage//
-
-if (localStorage.getItem("cart") != null) {
-    console.log("Get into validation");
-    let cartValues = JSON.parse(localStorage.getItem("cart"));
-    cart = cartValues;
-}
-// VAlidación del storage//
 
 function addToTheCart(product) {
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
+
     let aux = 0;
     for (let i = 0; i < cart.length; i++) {
         aux += cart[i].price;
     }
-    document.getElementById("totalPrice").innerHTML = aux;
+    document.getElementById("totalPrice").innerHTML = "ARS" + aux;
+    document.getElementById("counter").innerHTML = cart.length;
 }
 
-// function deleteAProduct() {
-//     const newCart[];
-//     for (let i = 0; i < cart.length; i++) {
-//         if (i != 1) {
-//             newCart.push(cart[i]);
+/* function deleteAProduct() {
+    const newCart= [];
+    for (let i = 0; i < cart.length; i++) {
+        if (i != 1) {
+            newCart.push(cart[i]);
 
-//         }
+    }
+    localStorage.setItem("cart", JSON.stringify(newCart));
+    cart= newCart;
+    document.getElementById(xxxx)
+    document.getElementById("counter").innerHTML = cart.length;
 
-//     }
-//     localStorage.setItem("cart", JSON.stringify(newCart));
+} */
 
-// hacer lo de la linea del storage en la 1era linea de codigo y lo otro que falta min 48 clase 09 toto
-// }
+
+/*function funcion(){let pass=document.getElementById('name').value;if(pass.length<5 && pass.length!= 0){alert("la contraseña debe ser mayor a 5 caracteres");}else if(pass=="" || pass == null){alert("ingrese una contraseña");}//let ape= document.getElementById('ape').value;}*/
+
+
 

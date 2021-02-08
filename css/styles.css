@@ -1,6 +1,13 @@
+
+
 /*Generals*/
+
 body {
   background-color: rgba(133, 124, 124, 0.445);
+}
+.no-gutters {
+  padding-left: 0;
+  padding-right: 0;
 }
 .row {
   justify-content: center;
@@ -8,18 +15,74 @@ body {
 h1 {
   font-size: 3rem;
   text-align: center;
-  color: brown;
+  color: rgba(165, 42, 42, 0.876);
+  text-shadow: 0px 4px 3px rgba(117, 109, 109, 0.623);
 }
-h2 {
+h3 {
   font-size: 1.5rem;
+  text-align: left;
+  color: rgba(88, 76, 77, 0.911);
+}
+h4{
+  font-size: 1.3rem;
+  text-align: left;
+  color: rgba(88, 76, 77, 0.911);
+
+}
+h5 {
   text-align: center;
+  color: rgba(117, 109, 109, 0.623) ;
 }
 p {
   text-align: center;
-  font-size: normal;
+  font-size: 1rem;
   font-weight: normal;
+  
 }
+.product-fabric, .product-items, .product-stock{
+  text-align: left;
+}
+
 /*Generals*/
+/*Navbar*/
+.navbar {
+  height: 6rem;
+}
+.navbar-nav {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand {
+  padding-bottom: 0rem;
+}
+.navbar-brand {
+  background-image: url(../logo/Diseño\ sin\ título.png);
+  padding-bottom: 1rem;
+}
+
+.logo {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  display: flex;
+}
+
+/*Navbar*/
+
+/*Jumbotron*/
+.jumbotron {
+  margin-top: 8rem !important;
+  margin-bottom: 3rem !important;
+}
+/*Jumbotron*/
+
+/*Cards*/
+
+
+
+
+/*Cards*/
 
 /*List Groups*/
 
@@ -39,6 +102,10 @@ p {
   background-color: rgb(224, 122, 95);
 }
 /* Buttons - General */
+.btn {
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 0.5rem;
+}
 
 .btn-primary {
   background-color: rgb(242, 204, 143);
@@ -50,9 +117,7 @@ p {
   border-color: rgb(0, 128, 128);
   text-decoration: none;
 }
-.btn-pay {
-  margin: 1.5rem;
-}
+
 .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
@@ -72,4 +137,14 @@ p {
   border-color: rgb(224, 122, 95);
   box-shadow: 0 0 0 0.2rem rgb(224, 122, 95);
 }
+
+.btn-lg {
+  display: flex;
+  justify-content: center;
+  margin: 0 6rem 0 6rem;
+}
+
+.btn-pay {
+  margin: 1rem 2rem 0 2rem;
+ }
 /* Buttons - General */
