@@ -1,5 +1,3 @@
-
-
 /*Generals*/
 
 body {
@@ -23,23 +21,23 @@ h3 {
   text-align: left;
   color: rgba(88, 76, 77, 0.911);
 }
-h4{
+h4 {
   font-size: 1.3rem;
   text-align: left;
   color: rgba(88, 76, 77, 0.911);
-
 }
 h5 {
   text-align: center;
-  color: rgba(117, 109, 109, 0.623) ;
+  color: rgba(117, 109, 109, 0.623);
 }
 p {
   text-align: center;
   font-size: 1rem;
   font-weight: normal;
-  
 }
-.product-fabric, .product-items, .product-stock{
+.product-fabric,
+.product-items,
+.product-stock {
   text-align: left;
 }
 
@@ -79,9 +77,6 @@ p {
 
 /*Cards*/
 
-
-
-
 /*Cards*/
 
 /*List Groups*/
@@ -98,9 +93,12 @@ p {
   color: rgba(0, 139, 139, 0.698);
 }
 /*List Groups*/
+/*Jumbotron*/
 .jumbotron {
   background-color: rgb(224, 122, 95);
 }
+/*Jumbotron*/
+
 /* Buttons - General */
 .btn {
   margin: 1rem 2rem 1rem 2rem;
@@ -146,5 +144,42 @@ p {
 
 .btn-pay {
   margin: 1rem 2rem 0 2rem;
- }
+  outline: none;
+  
+}
+.btn-pay a {
+  color: rgb(255, 255, 255);
+  
+}
+.btn-pay:hover a {
+  color: white;
+  text-decoration: none;
+}
+
 /* Buttons - General */
+
+/* Contact Form*/
+.contact-form {
+  margin: 15rem;
+}
+
+.submit-button {
+  margin: 1.5rem 25rem;
+}
+
+/*Contact Form*/
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+/*Modal*/
+
+/* .modal-bottom-footer {
+  display: flex;
+    align-items: center;
+} */
+/*Modal*/

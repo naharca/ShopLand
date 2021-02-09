@@ -1,6 +1,6 @@
 let cart = [];
 
-// VAlidación del storage//
+// Storage Validation//
 
 if (localStorage.getItem("cart") != null) {
     console.log("Get into validation");
@@ -8,9 +8,9 @@ if (localStorage.getItem("cart") != null) {
     cart = cartValues;
     document.getElementById("counter").innerHTML = cart.length;
 }
-// Validación del storage//
+// Storage Validation//
 
-
+//Constructor//
 class Product {
     constructor(
         productType,
@@ -41,6 +41,9 @@ class Product {
         </div>`;
     }
 }
+//Constructor//
+
+//Obejects Arays//
 
 let dataBase = []
 
@@ -49,7 +52,7 @@ let productShirtTwo = new Product('T-Shirt', 'Xtreme', 'Cotton', 1200, 35, "http
 let productJean = new Product('Jean', 'Comfy Jeans', 'Denim', 2350, 10, "https://i.pinimg.com/236x/07/41/ee/0741eed21386e0a53895b3f66e224eed.jpg");
 let productSkirt = new Product('Skirt', 'Levis', 'Organic Leather', 2800, 16, "https://i.pinimg.com/236x/f2/6f/61/f26f61b72d0e9768fdcaf44f2999c12a.jpg");
 let productJacket = new Product('Jacket', 'Bomb', 'Mixed', 2400, 3, "https://i.pinimg.com/236x/7a/ff/ef/7affeff3c66b28d23343f7ade96e1136.jpg");
-let productJacketTwo = new Product('Jacket', 'Awesome', 'Leather', 5400, 6, "https://i.pinimg.com/236x/04/16/03/041603c21dabc8b6d576c16c334f172b.jpg");
+let productJacketTwo = new Product('Jacket', 'Awesome', 'Leather', 5400, 12, "https://i.pinimg.com/236x/04/16/03/041603c21dabc8b6d576c16c334f172b.jpg");
 
 
 dataBase.push(productShirtOne);
@@ -58,6 +61,8 @@ dataBase.push(productJean);
 dataBase.push(productSkirt);
 dataBase.push(productJacket);
 dataBase.push(productJacketTwo);
+
+//Obejects Arays//
 
 
 let aux = ``;
@@ -90,7 +95,7 @@ for (let i = 0; i < dataBase.length; i++) {
 }
 document.getElementById("products").innerHTML = aux;
 
-
+//Add to the cart acumulator//
 function addToTheCart(product) {
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
@@ -99,9 +104,58 @@ function addToTheCart(product) {
     for (let i = 0; i < cart.length; i++) {
         aux += cart[i].price;
     }
-    document.getElementById("totalPrice").innerHTML = "ARS" + aux;
+    document.getElementById("totalPrice").innerHTML = "ARS= " + aux;
     document.getElementById("counter").innerHTML = cart.length;
 }
+//Add to the cart acumulator//
+
+//Close Modal//
+
+let modal = document.getElementById('modal-warning');
+function modalWarning() {
+
+    modal.classList.remove('hide');
+    modal.classList.add('show');
+
+
+}
+
+function closeModal() {
+    modal.classList.remove('show');
+}
+
+let closeWarning = document.getElementById('accept-warning');
+
+//Close Modal//
+
+//Enter caption to execute closing modal//
+function acceptAndClose(event) {
+    console.log(event.key);
+    if (event.keyCode == 13) {
+        modal.classList.remove('show');
+    }
+}
+ //Enter caption to execute closing modal//
+
+
+
+
+
+//Enter caption//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* function deleteAProduct() {
     const newCart= [];
@@ -119,6 +173,5 @@ function addToTheCart(product) {
 
 
 /*function funcion(){let pass=document.getElementById('name').value;if(pass.length<5 && pass.length!= 0){alert("la contraseña debe ser mayor a 5 caracteres");}else if(pass=="" || pass == null){alert("ingrese una contraseña");}//let ape= document.getElementById('ape').value;}*/
-
 
 
