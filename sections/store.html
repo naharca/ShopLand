@@ -17,7 +17,7 @@
 <body>
 
 
-  <body class="no-gutters">
+  <body class="container-fluid no-gutters">
     
     <!-- Navigation -->
     
@@ -58,7 +58,7 @@
         </div>
       </div>
     </nav>
-
+<!-- Navigation -->
 
     <!-- Page Content -->
     <div class="container">
@@ -69,7 +69,7 @@
           You're getting into a beautiful world, full of good taste and options
           to look wonderful every time.
         </p>
-        <a href="#" class="btn btn-primary btn-lg shadow">Let's See!</a>
+        
       </header>
       
       <!-- Page Features -->
@@ -79,23 +79,27 @@
     </div>
     </div>
 </div>
- <!--Acumulador-->
-    <div class="row justify-content-center">
-        <div class="row col-lg-3 col-md-6 mb-4 align-self-center jus">
-            <div class="card h-50">
-                <div class="card-body">
-                    <h3 class="cart-total">Total</h3>
-                    <div class="list-group">
-                        <a href="#" class="list-group-item" id="totalPrice"></a>
-                        <button class="btn-pay btn-primary btn-lg shadow-md " onclick="modalWarning()">
-                             <a href="#" >Go to pay</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
 
+ <!--Acumulador-->
+ 
+  <div class="row justify-content-center">
+    <div class="row col-lg-3 col-md-6 mb-4 align-self-center jus">
+      <div class="card h-50">
+        <div class="card-body">
+          <h3 class="cart-total">Total</h3>
+          <div class="list-group">
+            <a href="#" class="list-group-item" id="totalPrice"></a>
+            <button class="btn-pay btn-primary btn-lg shadow-md " onclick="modalWarning()">
+              <a href="#" >Go to pay</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+<!--Acumulador-->
+
+<!--Modal-->
 
     <div class="modal hide" tabindex="-1" id="modal-warning">
         <div class="modal-dialog">
@@ -116,9 +120,9 @@
             </div>
           </div>
         </div>
-      </div>
+   </div>
   
-
+<!--Modal-->
 
 <button id="counter">0</button>
 

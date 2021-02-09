@@ -1,4 +1,4 @@
-/*Generals*/
+/*General Utilities*/
 
 body {
   background-color: rgba(133, 124, 124, 0.445);
@@ -9,6 +9,9 @@ body {
 }
 .row {
   justify-content: center;
+}
+img {
+  max-width: 100%;
 }
 h1 {
   font-size: 3rem;
@@ -30,74 +33,44 @@ h5 {
   text-align: center;
   color: rgba(117, 109, 109, 0.623);
 }
+
 p {
   text-align: center;
   font-size: 1rem;
   font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.product-fabric,
-.product-items,
-.product-stock {
-  text-align: left;
-}
-
-/*Generals*/
-/*Navbar*/
-.navbar {
-  height: 6rem;
-}
-.navbar-nav {
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.navbar-brand {
-  padding-bottom: 0rem;
-}
-.navbar-brand {
-  background-image: url(../logo/Diseño\ sin\ título.png);
-  padding-bottom: 1rem;
-}
-
-.logo {
-  height: 6rem;
-  width: 6rem;
-  border-radius: 50%;
-  display: flex;
-}
-
-/*Navbar*/
-
-/*Jumbotron*/
-.jumbotron {
-  margin-top: 8rem !important;
-  margin-bottom: 3rem !important;
-}
-/*Jumbotron*/
-
-/*Cards*/
-
-/*Cards*/
-
-/*List Groups*/
-
-.list-group-item {
-  color: rgba(165, 42, 42, 0.911);
-  font-size: 2rem;
-  font-weight: bold;
+.p-under-title {
+  margin-bottom: 5rem;
+  color: rgb(2, 90, 68);
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.list-group-item:hover {
-  text-decoration: none;
+.title1 {
+  margin-top: 6rem;
+  padding: 1.5rem;
+  color: rgba(165, 42, 42, 0.876);
   text-align: center;
-  color: rgba(0, 139, 139, 0.698);
+  font-size: 5rem;
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-/*List Groups*/
-/*Jumbotron*/
-.jumbotron {
-  background-color: rgb(224, 122, 95);
+.text {
+  text-align: center;
+  padding: 5rem;
+  font-weight: 350;
+  color: rgba(165, 42, 42, 0.876);
+  font-size: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-/*Jumbotron*/
+
 
 /* Buttons - General */
 .btn {
@@ -145,11 +118,9 @@ p {
 .btn-pay {
   margin: 1rem 2rem 0 2rem;
   outline: none;
-  
 }
 .btn-pay a {
   color: rgb(255, 255, 255);
-  
 }
 .btn-pay:hover a {
   color: white;
@@ -157,6 +128,119 @@ p {
 }
 
 /* Buttons - General */
+
+/*Generals*/
+
+/*Navbar*/
+.navbar {
+  height: 6rem;
+}
+.navbar-nav {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand {
+  padding-bottom: 0rem;
+}
+.navbar-brand {
+  background-image: url(../logo/Diseño\ sin\ título.png);
+  padding-bottom: 1rem;
+}
+
+.logo {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  display: flex;
+}
+
+/*Navbar*/
+
+/*Home page*/
+/*Carousel*/
+.carousel {
+  transition: 0.4s;
+  margin: 2rem;
+}
+.carousel-item {
+  height: 50vh;
+  border-radius: 0.5rem;
+}
+
+.slide1 {
+  background-image: url(../img/slide_sweater_image.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.slide2 {
+  background-image: url(../img/slide_manClothes_image.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.slide3 {
+  background-image: url(../img/slide_womenClothes_image.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+/*Carousel*/
+/*Home page*/
+
+/*Store*/
+/*Jumbotron Store*/
+.jumbotron {
+  margin-top: 8rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.jumbotron {
+  background-color: rgba(224, 123, 95, 0.534);
+}
+
+/*Jumbotron Store*/
+
+/*Cards*/
+/*Card texts*/
+.product-fabric,
+.product-items,
+.product-stock {
+  text-align: left;
+}
+/*Cards*/
+
+/*List Groups*/
+
+.list-group-item {
+  color: rgba(165, 42, 42, 0.911);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.list-group-item:hover {
+  text-decoration: none;
+  text-align: center;
+  color: rgba(0, 139, 139, 0.698);
+}
+/*List Groups*/
+
+
+/*Modal total btn Store*/
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+/*Modal*/
+/* .modal-bottom-footer {
+  display: flex;
+    align-items: center;
+} */
+/*Modal*/
+/*Store*/
+
 
 /* Contact Form*/
 .contact-form {
@@ -168,18 +252,5 @@ p {
 }
 
 /*Contact Form*/
-.hide {
-  display: none;
-}
 
-.show {
-  display: block;
-}
 
-/*Modal*/
-
-/* .modal-bottom-footer {
-  display: flex;
-    align-items: center;
-} */
-/*Modal*/
