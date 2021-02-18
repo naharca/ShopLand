@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Store</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -49,7 +49,8 @@
               <a class="nav-link active" href="./store.html">Store</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Cart</a>
+              <!-- <button id="counter"></button> -->
+              <a class="nav-link " href="../sections/cart.html"><img  src="../icons/cart.svg.svg" alt="cart"></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./login.html">Login</a>
@@ -58,31 +59,55 @@
         </div>
       </div>
     </nav>
-<!-- Navigation -->
+            <!-- Navigation -->
 
-    <!-- Page Content -->
+           <!-- Page Content -->
     <div class="container">
-      <!-- Jumbotron Header -->
+           <!-- Jumbotron Header -->
       <header class="jumbotron my-4 shadow-md">
-        <h1 class="display-3">¡Welcome to ShopLand!</h1>
+         <h1 class="display-3">Welcome to ShopLand!</h1>
         <p class="lead">
           You're getting into a beautiful world, full of good taste and options
           to look wonderful every time.
         </p>
-        
       </header>
-      
+    </div> 
       <!-- Page Features -->
       <div class="row justify-content-center">
-        
         <div class="row" id="products"></div>
+      </div>
+ <!-- Page Features -->
+      
+<!--MODAL DE CARRITO PRUEBA-->
+
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h5 class="modal-title" id="exampleModalLabel">
+          Your Shopping Cart
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!--contenido del modal-->
+      <div class="row">
+      <div class="shopping-cart-items shoppingCartItemsContainer"></div>
+     </div>
+
+      
     </div>
-    </div>
+  </div>
 </div>
+
+ <!--MODAL DE CARRITO PRUEBA-->
+
+      
 
  <!--Acumulador-->
  
-  <div class="row justify-content-center">
+  <!-- <div class="row justify-content-center">
     <div class="row col-lg-3 col-md-6 mb-4 align-self-center jus">
       <div class="card h-50">
         <div class="card-body">
@@ -96,11 +121,14 @@
         </div>
       </div>
     </div>
-  </div> 
-<!--Acumulador-->
+  </div>  -->
+ <!--Acumulador-->
 
-<!--Modal-->
+ 
 
+
+ <!--Modal Emergente del acumulador-->
+<!-- 
     <div class="modal hide" tabindex="-1" id="modal-warning">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -120,23 +148,25 @@
             </div>
           </div>
         </div>
-   </div>
+   </div> -->
   
-<!--Modal-->
+ <!--Modal-->
 
-<button id="counter">0</button>
+ <!-- contador del carrito -->
+ <!-- <button id="counter">0</button> -->
 
 
-
+<div class="container-fluid  no-gutters">
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; ShopLand 2020</p>
       </div>
-      <!-- /.container -->
+     
     </footer>
+  </div>
 
-
+ <!-- Footer -->
 
 
 
@@ -158,6 +188,13 @@
       crossorigin="anonymous"
     ></script>
     <script src="../scripts/store.js"></script>
+    <script src="../scripts/cart.js"></script>
+   
+    
+
+    
+    
+
     
 </body>
 </html>

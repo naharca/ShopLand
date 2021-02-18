@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Cart</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
@@ -15,7 +15,8 @@
   </head>
 
   <body class="container-fluid no-gutters">
-    <!--Navigation-->
+    <!-- Navigation -->
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="../index.html">
@@ -57,66 +58,49 @@
         </div>
       </div>
     </nav>
-    <!--Navigation-->
+<!--Navigation-->
 
 
 
-    <!--Forms-->
-    <form class="contact-form">
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" />
-        </div>
-        <div class="form-group col-md-6" >
-          <label for="inputPassword4" >Password</label>
-          <input type="password" class="form-control" id="password-validation" onchange="validatePassword(event)" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input
-          type="text"
-          class="form-control"
-          id="inputAddress"
-          placeholder="1234 Main St"
-        />
-      </div>
-      <div class="form-group">
-        <label for="inputAddress2">Address 2</label>
-        <input
-          type="text"
-          class="form-control"
-          id="inputAddress2"
-          placeholder="Apartment, studio, or floor"
-        />
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity" />
-        </div>
-        <div class="form-group col-md-4">
-          <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" id="inputZip" />
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck" />
-          <label class="form-check-label" for="gridCheck"> Check me out </label>
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary submit-button">Sign in</button>
-    </form>
-    <!--Forms-->
+
+<h1 class="my-title">TESTING OF JQUERY CHALLENGE</h1>
+ <!--CARD PARA DESAFÍo-->
+ <p>¡Hola!<br> 
+   Interactúa con la card<br>
+ </p>
+ <div class="row no-gutters container-fluid excercise">
+  <div class="card" style="width: 18rem" id="sampleCard">
+    <img
+      class="card-img-top"
+      src="../logo/logo_logo_sholpland.png"
+      alt="logo"
+    />
+    <div class="card-body new-style">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the
+        bulk of the card's content.
+      </p>
+
+      <a href="#" class="btn btn-primary button-1">Button 1</a>
+      <a href="#" class="btn btn-primary button-2">Button 2</a>
+    </div>
+  </div>
+</div>
+
+<!--CARD PARA DESAFÍo-->
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
@@ -124,6 +108,7 @@
         <p class="m-0 text-center text-white">Copyright &copy; ShopLand 2020</p>
       </div>
     </footer>
+    <!-- Footer -->
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -140,8 +125,8 @@
       integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
       crossorigin="anonymous"
     ></script>
-    <script src="../scripts/login.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script src="../scripts/cart.js"></script>
+    
+    
   </body>
 </html>

@@ -6,7 +6,7 @@ if (localStorage.getItem("cart") != null) {
     console.log("Get into validation");
     let cartValues = JSON.parse(localStorage.getItem("cart"));
     cart = cartValues;
-    document.getElementById("counter").innerHTML = cart.length;
+    // document.getElementById("counter").innerHTML = cart.length;
 }
 // Storage Validation//
 
@@ -64,89 +64,121 @@ dataBase.push(productJacketTwo);
 
 //Obejects Arays//
 
-
+//Add to the Cart Function//
 let aux = ``;
 for (let i = 0; i < dataBase.length; i++) {
-    if (dataBase[i].stock > 0) {
+    // if (dataBase[i].stock > 0) {
 
         aux += `
     
     <div class="row col-lg-3 col-md-6 mb-4 align-self-center">
-    <div class="card h-100">
-    <img class="card-img-top" src="${dataBase[i].picture}" alt="Product Picture" class="img-fluid" height="300px" width="354px">
+    <div class="item card h-100">
+    <img class="item-image card-img-top" src="${dataBase[i].picture}" alt="Product Picture" class="img-fluid" height="300px" width="354px">
     <div class="card-body">
-    <h1 class="card-title">${dataBase[i].type}</h1>
-    <h5 class="card-brand"><p>${dataBase[i].brand}</p></h5>
-    <h4 class="card-fabric"><p class="product-fabric">Fabric:    <strong>${dataBase[i].fabric}</strong></p></h4>
-    <h3 class="card-price"><p class="product-items">Precio:      <strong> ${dataBase[i].price}</strong></p></h3>
-    <h3 class="card-stock"><p class="product-stock">Stock:        <strong> ${dataBase[i].stock}</strong></p></h3>
+    <h1 class="item-title">${dataBase[i].type}</h1>
+    <h5 class="item-brand"><p>${dataBase[i].brand}</p></h5>
+    <h4 class="item-fabric"><p class="product-fabric">Fabric:    <strong>${dataBase[i].fabric}</strong></p></h4>
+    <h3 class="item-price"><p class="product-items">$            <strong> ${dataBase[i].price}</strong></p></h3>
+    <h3 class="item-stock"><p class="product-stock">Stock:       <strong> ${dataBase[i].stock}</strong></p></h3>
     </div>
     <div class="card-footer">
-    <a href="#" class="btn btn-primary" onclick='addToTheCart(${JSON.stringify(dataBase[i])})'>Add to the Cart</a>
+    <button type="button" class="btn btn-primary btn-success addToCart" data-toggle="modal" data-target="#cartModal" onclick='addToCart(${JSON.stringify(dataBase[i])})'>Add to the Cart</button>
     </div>
     </div>
     </div>
     `;
-    } else {
-        aux += `
-        <p>Out Of Stock</p>`;
-    }
+    // } else {
+    //     aux += `
+    //     <p>Out Of Stock</p>`;
+    // }
 
 }
 document.getElementById("products").innerHTML = aux;
 
-//Add to the cart acumulator//
-function addToTheCart(product) {
-    cart.push(product);
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    let aux = 0;
-    for (let i = 0; i < cart.length; i++) {
-        aux += cart[i].price;
-    }
-    document.getElementById("totalPrice").innerHTML = "ARS= " + aux;
-    document.getElementById("counter").innerHTML = cart.length;
-}
-//Add to the cart acumulator//
-
-//Close Modal//
-
-let modal = document.getElementById('modal-warning');
-function modalWarning() {
-
-    modal.classList.remove('hide');
-    modal.classList.add('show');
-
-
-}
-
-function closeModal() {
-    modal.classList.remove('show');
-}
-
-let closeWarning = document.getElementById('accept-warning');
-
-//Close Modal//
-
-//Enter caption to execute closing modal//
-function acceptAndClose(event) {
-    console.log(event.key);
-    if (event.keyCode == 13) {
-        modal.classList.remove('show');
-    }
-}
- //Enter caption to execute closing modal//
 
 
 
 
 
-//Enter caption//
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Add to the Cart Function//
+
+//Delete a Product Function//
+
+
+
+
+
+
+
+// //Delete a Product Function//
+
+// //Add to the cart acumulator//
+// function addToTheCart(product) {
+//     cart.push(product);
+//     localStorage.setItem("cart", JSON.stringify(cart));
+
+//     let aux = 0;
+//     for (let i = 0; i < cart.length; i++) {
+//         aux += cart[i].price;
+//     }
+//     document.getElementById("totalPrice").innerHTML = "ARS= " + aux;
+//     document.getElementById("counter").innerHTML = cart.length;
+// }
+// //Add to the cart acumulator//
+
+// //Close Modal Store (total)//
+
+// let modal = document.getElementById('modal-warning');
+// function modalWarning() {
+
+//     modal.classList.remove('hide');
+//     modal.classList.add('show');
+
+// }
+
+// function closeModal() {
+//     modal.classList.remove('show');
+// }
+
+// let closeWarning = document.getElementById('accept-warning');
+
+// //Close Modal//
+
+// //Enter caption to execute closing modal//
+// function acceptAndClose(event) {
+//     console.log(event.key);
+//     if (event.keyCode == 13) {
+//         modal.classList.remove('show');
+//     }
+// }
+//  //Enter caption to execute closing modal//
 
 
 
