@@ -15,8 +15,6 @@ addToShoppingCartButtons.forEach((addToCartButton) => {
 
 });
 
-
-
 const shoppingCartItemsContainer = document.querySelector(
     '.shoppingCartItemsContainer'
 );
@@ -49,8 +47,6 @@ function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
                 '.shoppingCartItemQuantity'
             );
             elementQuantity.value++;
-            $('.toast').toast('show'); //ojo con este toast, es algo de bs
-            updateShoppingCartTotal();
             return;
         }
     }
@@ -63,45 +59,32 @@ function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
           <table class="table table-image">
              <thead>
                  <tr>
-                 <th scope="col"></th>
-                 <th scope="col">Product</th>
-                 <th scope="col">Price</th>
-                 <th scope="col">Qty</th>
-                 <th scope="col">Total</th>
-                 <th scope="col">Actions</th>
+                      <th scope="col"></th>
+                      <th scope="col">Product</th>
+                     <th scope="col">Price</th>
+                     <th scope="col">Qty</th>
+                     <th scope="col">Delete</th>
                  </tr>
                </thead>
                 <tbody>
                    <tr>
                       <td class="w-25">
-                          <img src=${itemImage} class="img-fluid img-thumbnail" alt="Sheep">
+                          <img src=${itemImage} class="img-fluid img-thumbnail" alt="Product Image">
                       </td>
                      <td class="shoppingCartItemTitle">${itemTitle} </td>
                      <td class="shoppingCartItemPrice">${itemPrice} </td>
-                     <td class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
-                     <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
+                     <td class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 pb-1 pt-2">
+                     <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number" 
                       value="1"></td>
+                      <td>
+                     <button class="btn-delete btn-primary btn-sm buttonDelete" type="button">X</button></td>
                      
-             
-                     <button class="btn btn-primary btn-sm buttonDelete" type="button">X</button>
-          
                     </tr>
                 </tbody>
             </table>
-            <div class="row">
-                <div class="col-12">
-                    <div class="shopping-cart-total d-flex align-items-center">
-                        <p class="mb-0 ml-4 shoppingCartTotal">$</p>
-
-                    </div>        
-
-                </div>           
-
-            </div>               
-
            <div class="modal-footer border-top-0 d-flex justify-content-between">
-                   <button type="button" class="btn btn-secondary btn-primary" data-dismiss="modal">Close</button>
-                   <button type="button" class="btn btn-success btn-primary">Checkout</button>
+                   <button type="button" class="btn btn-secondary btn-primary" data-dismiss="modal">Keep Shopping</button>
+                   <a type="button" class="btn btn-success btn-primary" href="../sections/sign_in.html">Go to Checkout</a>
           </div>
                
         </div>
@@ -163,6 +146,13 @@ function updateShoppingCartTotal() {
     shoppingCartItemsContainer.innerHTML = '';
     updateShoppingCartTotal();
   }
+
+
+
+
+
+
+  
 
 // desafío aplicando Jquery//
   $(document).ready(function(){

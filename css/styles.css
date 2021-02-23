@@ -52,6 +52,17 @@ p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+.p-total{
+  margin-bottom: 1rem;
+  color: rgba(165, 42, 42, 0.63);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+}
+
 .title1 {
   margin-top: 6rem;
   padding: 1.5rem;
@@ -198,7 +209,7 @@ p {
 /*Carousel*/
 /*Home page*/
 
-/*Store*/
+/*STORE SECTION*/
 /*Jumbotron Store*/
 .jumbotron {
   margin-top: 8rem !important;
@@ -235,6 +246,21 @@ p {
 }
 /*List Groups*/
 
+/*SHOPPING CART*/
+.table td{
+  border-top: none;
+}
+
+.shopping-cart-quantity-input {
+  height: 1.5rem;
+}
+input {
+  width: 3rem;
+}
+.shoppingCartTotal{
+  text-align: center;
+}
+
 
 /*Modal total btn Store*/
 .hide {
@@ -250,9 +276,9 @@ p {
     align-items: center;
 } */
 /*Modal*/
-/*Store*/
+/*STORE SECTION*/
 
-
+/*LOGIN SECTION*/
 /* Contact Form*/
 .contact-form {
   margin: 15rem;

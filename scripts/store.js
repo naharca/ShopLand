@@ -28,18 +28,18 @@ class Product {
         this.picture = productPicture;
     }
 
-    showTheProducts() {
-        document.getElementById("chart").innerHTML = `
-        <div> 
-        <h2> This Are Our Products </h2>
-        <p>${this.type}</p>
-        <p>${this.brand}</p>
-        <p>${this.fabric}</p>
-        <p>${this.price}</p>
-        <p>${this.stock}</p>
-        <p>${this.picture}</p>
-        </div>`;
-    }
+    // showTheProducts() {
+    //     document.getElementById("chart").innerHTML = `
+    //     <div> 
+    //     <h2> This Are Our Products </h2>
+    //     <p>${this.type}</p>
+    //     <p>${this.brand}</p>
+    //     <p>${this.fabric}</p>
+    //     <p>${this.price}</p>
+    //     <p>${this.stock}</p>
+    //     <p>${this.picture}</p>
+    //     </div>`;
+    // }
 }
 //Constructor//
 
@@ -47,12 +47,12 @@ class Product {
 
 let dataBase = []
 
-let productShirtOne = new Product('T-Shirt', 'Showcase', 'Cotton', 850, 15, "https://i.pinimg.com/236x/49/6a/8c/496a8c050d0a86d1cb7173d4123c40c4.jpg");
-let productShirtTwo = new Product('T-Shirt', 'Xtreme', 'Cotton', 1200, 35, "https://i.pinimg.com/236x/c2/e8/5b/c2e85bd243a2bff4b587726524470418.jpg");
-let productJean = new Product('Jean', 'Comfy Jeans', 'Denim', 2350, 10, "https://i.pinimg.com/236x/07/41/ee/0741eed21386e0a53895b3f66e224eed.jpg");
-let productSkirt = new Product('Skirt', 'Levis', 'Organic Leather', 2800, 16, "https://i.pinimg.com/236x/f2/6f/61/f26f61b72d0e9768fdcaf44f2999c12a.jpg");
-let productJacket = new Product('Jacket', 'Bomb', 'Mixed', 2400, 3, "https://i.pinimg.com/236x/7a/ff/ef/7affeff3c66b28d23343f7ade96e1136.jpg");
-let productJacketTwo = new Product('Jacket', 'Awesome', 'Leather', 5400, 12, "https://i.pinimg.com/236x/04/16/03/041603c21dabc8b6d576c16c334f172b.jpg");
+let productShirtOne = new Product('T-Shirt', 'Showcase', 'Cotton', 17 , 15, "https://i.pinimg.com/236x/49/6a/8c/496a8c050d0a86d1cb7173d4123c40c4.jpg");
+let productShirtTwo = new Product('T-Shirt', 'Xtreme', 'Cotton', 15, 35, "https://i.pinimg.com/236x/c2/e8/5b/c2e85bd243a2bff4b587726524470418.jpg");
+let productJean = new Product('Jean', 'Comfy Jeans', 'Denim', 25, 10, "https://i.pinimg.com/236x/07/41/ee/0741eed21386e0a53895b3f66e224eed.jpg");
+let productSkirt = new Product('Skirt', 'Levis', 'Organic Leather', 20, 16, "https://i.pinimg.com/236x/f2/6f/61/f26f61b72d0e9768fdcaf44f2999c12a.jpg");
+let productJacket = new Product('Jacket', 'Bomb', 'Mixed', 40, 3, "https://i.pinimg.com/236x/7a/ff/ef/7affeff3c66b28d23343f7ade96e1136.jpg");
+let productJacketTwo = new Product('Jacket', 'Awesome', 'Leather', 42, 12, "https://i.pinimg.com/236x/04/16/03/041603c21dabc8b6d576c16c334f172b.jpg");
 
 
 dataBase.push(productShirtOne);
@@ -78,11 +78,11 @@ for (let i = 0; i < dataBase.length; i++) {
     <h1 class="item-title">${dataBase[i].type}</h1>
     <h5 class="item-brand"><p>${dataBase[i].brand}</p></h5>
     <h4 class="item-fabric"><p class="product-fabric">Fabric:    <strong>${dataBase[i].fabric}</strong></p></h4>
-    <h3 class="item-price"><p class="product-items">$            <strong> ${dataBase[i].price}</strong></p></h3>
+    <h3 class="item-price"><p class="product-items">$           <strong> ${dataBase[i].price}</strong></p></h3>
     <h3 class="item-stock"><p class="product-stock">Stock:       <strong> ${dataBase[i].stock}</strong></p></h3>
     </div>
     <div class="card-footer">
-    <button type="button" class="btn btn-primary btn-success addToCart" data-toggle="modal" data-target="#cartModal" onclick='addToCart(${JSON.stringify(dataBase[i])})'>Add to the Cart</button>
+    <button type="button" class="btn btn-primary btn-success addToCart" data-toggle="modal" data-target="#cartModal">Add to the Cart</button>
     </div>
     </div>
     </div>
@@ -94,25 +94,6 @@ for (let i = 0; i < dataBase.length; i++) {
 
 }
 document.getElementById("products").innerHTML = aux;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
