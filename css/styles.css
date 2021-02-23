@@ -52,16 +52,7 @@ p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.p-total{
-  margin-bottom: 1rem;
-  color: rgba(165, 42, 42, 0.63);
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-}
 
 .title1 {
   margin-top: 6rem;
@@ -93,6 +84,7 @@ p {
 .btn-primary {
   background-color: rgb(242, 204, 143);
   border-color: rgb(242, 204, 143);
+  box-shadow: 0.2rem 0.2rem rgba(68, 66, 66, 0.322);
 }
 .btn-primary:hover {
   color: #ffffffc9;
@@ -186,7 +178,7 @@ p {
   margin: 2rem;
 }
 .carousel-item {
-  height: 50vh;
+  height: 70vh;
   border-radius: 0.5rem;
 }
 
@@ -218,6 +210,7 @@ p {
 
 .jumbotron {
   background-color: rgba(224, 123, 95, 0.534);
+  box-shadow: 0.3rem 0.3rem rgba(117, 110, 110, 0.39);
 }
 
 /*Jumbotron Store*/
@@ -244,6 +237,10 @@ p {
   text-align: center;
   color: rgba(0, 139, 139, 0.698);
 }
+
+.card {
+  box-shadow: 0.3rem 0.3rem rgba(117, 110, 110, 0.253);
+}
 /*List Groups*/
 
 /*SHOPPING CART*/
@@ -260,25 +257,19 @@ input {
 .shoppingCartTotal{
   text-align: center;
 }
+.p-total{
+  margin-bottom: 1rem;
+  color: rgba(165, 42, 42, 0.63);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
-
-/*Modal total btn Store*/
-.hide {
-  display: none;
 }
 
-.show {
-  display: block;
-}
-/*Modal*/
-/* .modal-bottom-footer {
-  display: flex;
-    align-items: center;
-} */
-/*Modal*/
-/*STORE SECTION*/
 
-/*LOGIN SECTION*/
+/*SIGN IN SECTION*/
 /* Contact Form*/
 .contact-form {
   margin: 15rem;
@@ -289,5 +280,24 @@ input {
 }
 
 /*Contact Form*/
+
+
+
+/*Modal total btn Store*/
+/* .hide {
+  display: none;
+}
+
+.show {
+  display: block;
+} */
+/*Modal*/
+/* .modal-bottom-footer {
+  display: flex;
+    align-items: center;
+} */
+/*Modal*/
+/*STORE SECTION*/
+
 
 

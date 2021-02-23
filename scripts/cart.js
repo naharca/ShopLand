@@ -25,10 +25,8 @@ function addToCartClicked(e) {
 
     const itemImage = item.querySelector('.item-image').src;
     const itemTitle = item.querySelector('.item-title').textContent;
-    // const itemBrand = item.querySelector('.item-brand').textContent;
-    // const itemFabric = item.querySelector('.item-fabric').textContent;
     const itemPrice = item.querySelector('.item-price').textContent;
-    // const itemStock = item.querySelector('.item-stock').textContent;
+
 
     addItemToShoppingCart(itemImage,itemTitle,itemPrice);
 
@@ -69,7 +67,7 @@ function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
                 <tbody>
                    <tr>
                       <td class="w-25">
-                          <img src=${itemImage} class="img-fluid img-thumbnail" alt="Product Image">
+                          <img src=${itemImage} class="img-fluid img-thumbnail" width= 100 alt="Product Image">
                       </td>
                      <td class="shoppingCartItemTitle">${itemTitle} </td>
                      <td class="shoppingCartItemPrice">${itemPrice} </td>
