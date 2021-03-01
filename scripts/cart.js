@@ -1,50 +1,53 @@
 // OJO LOCAL STORAGE
 //Adding Element to shopping cart
-const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
-addToShoppingCartButtons.forEach((addToCartButton) => {
-  addToCartButton.addEventListener('click', addToCartClicked);
-
-});
-
-const shoppingCartItemsContainer = document.querySelector(
-  '.shoppingCartItemsContainer'
-);
-
-function addToCartClicked(e) {
-  const button = e.target;
-  const item = button.closest('.item');
-
-  const itemImage = item.querySelector('.item-image').src;
-  const itemTitle = item.querySelector('.item-title').textContent;
-  const itemPrice = item.querySelector('.item-price').textContent;
+$(document).ready(function () {
 
 
-  addItemToShoppingCart(itemImage, itemTitle, itemPrice);
+  const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
+  addToShoppingCartButtons.forEach((addToCartButton) => {
+    addToCartButton.addEventListener('click', addToCartClicked);
 
+  });
 
-}
-
-
-
-function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
-  const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
-    'shoppingCartItemTitle'
+  const shoppingCartItemsContainer = document.querySelector(
+    '.shoppingCartItemsContainer'
   );
-  for (let i = 0; i < elementsTitle.length; i++) {
-    if (elementsTitle[i].innerText === itemTitle) {
-      let elementQuantity = elementsTitle[
-        i
-      ].parentElement.parentElement.parentElement.querySelector(
-        '.shoppingCartItemQuantity'
-      );
-      elementQuantity.value++;
-      return;
-    }
+
+  function addToCartClicked(e) {
+    const button = e.target;
+    const item = button.closest('.item');
+
+    const itemImage = item.querySelector('.item-image').src;
+    const itemTitle = item.querySelector('.item-title').textContent;
+    const itemPrice = item.querySelector('.item-price').textContent;
+
+
+    addItemToShoppingCart(itemImage, itemTitle, itemPrice);
+
+
   }
 
-  //Generation of HTML div cart called from JS document 
-  const shoppingCartRow = document.createElement('div');
-  const shoppingCartContent = `
+
+
+  function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
+    const elementsTitle = $(
+      '.shoppingCartItemTitle'
+    );
+    for (let i = 0; i < elementsTitle.length; i++) {
+      if (elementsTitle[i].innerText === itemTitle) {
+        let elementQuantity = elementsTitle[
+          i
+        ].parentElement.parentElement.parentElement.querySelector(
+          '.shoppingCartItemQuantity'
+        );
+        elementQuantity.value++;
+        return;
+      }
+    }
+
+    //Generation of HTML div cart called from JS document 
+    const shoppingCartRow = document.createElement('div');
+    const shoppingCartContent = `
     <div class="row shoppingCartItem">
         <div class="modal-body">
           <table class="table table-image">
@@ -82,65 +85,65 @@ function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
 
 
 
-  shoppingCartRow.innerHTML = shoppingCartContent;
-  shoppingCartItemsContainer.append(shoppingCartRow);
+    shoppingCartRow.innerHTML = shoppingCartContent;
+    shoppingCartItemsContainer.append(shoppingCartRow);
 
-  shoppingCartRow
-    .querySelector('.buttonDelete')
-    .addEventListener('click', removeShoppingCartItem);
+    shoppingCartRow
+      .querySelector('.buttonDelete')
+      .addEventListener('click', removeShoppingCartItem);
 
-  shoppingCartRow
-    .querySelector('.shoppingCartItemQuantity')
-    .addEventListener('change', quantityChanged);
+    shoppingCartRow
+      .querySelector('.shoppingCartItemQuantity')
+      .addEventListener('change', quantityChanged);
 
-  updateShoppingCartTotal();
-}
-// updating shoping cart total when add a product
+    updateShoppingCartTotal();
+  }
+  // updating shoping cart total when add a product
 
-function updateShoppingCartTotal() {
-  let total = 0;
-  const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
+  function updateShoppingCartTotal() {
+    let total = 0;
+    const shoppingCartTotal = document.querySelector('.shoppingCartTotal');
 
-  const shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
+    const shoppingCartItems = document.querySelectorAll('.shoppingCartItem');
 
-  shoppingCartItems.forEach((shoppingCartItem) => {
-    const shoppingCartItemPriceElement = shoppingCartItem.querySelector(
-      '.shoppingCartItemPrice'
-    );
-    const shoppingCartItemPrice = Number(
-      shoppingCartItemPriceElement.textContent.replace('$', '')
-    );
-    const shoppingCartItemQuantityElement = shoppingCartItem.querySelector(
-      '.shoppingCartItemQuantity'
-    );
-    const shoppingCartItemQuantity = Number(
-      shoppingCartItemQuantityElement.value
-    );
-    total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
-  });
-  shoppingCartTotal.innerHTML = `${total.toFixed(2)}$`;
-}
+    shoppingCartItems.forEach((shoppingCartItem) => {
+      const shoppingCartItemPriceElement = shoppingCartItem.querySelector(
+        '.shoppingCartItemPrice'
+      );
+      const shoppingCartItemPrice = Number(
+        shoppingCartItemPriceElement.textContent.replace('$', '')
+      );
+      const shoppingCartItemQuantityElement = shoppingCartItem.querySelector(
+        '.shoppingCartItemQuantity'
+      );
+      const shoppingCartItemQuantity = Number(
+        shoppingCartItemQuantityElement.value
+      );
+      total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
+    });
+    shoppingCartTotal.innerHTML = `${total.toFixed(2)}$`;
+  }
 
-//Removoing an item from the cart 
+  //Removoing an item from the cart 
 
-function removeShoppingCartItem(e) {
-  const buttonClicked = e.target;
-  buttonClicked.closest('.shoppingCartItem').remove();
-  updateShoppingCartTotal();
-}
+  function removeShoppingCartItem(e) {
+    const buttonClicked = e.target;
+    buttonClicked.closest('.shoppingCartItem').remove();
+    updateShoppingCartTotal();
+  }
 
-function quantityChanged(e) {
-  const input = e.target;
-  input.value <= 0 ? (input.value = 1) : null;
-  updateShoppingCartTotal();
-}
+  function quantityChanged(e) {
+    const input = e.target;
+    input.value <= 0 ? (input.value = 1) : null;
+    updateShoppingCartTotal();
+  }
 
-function comprarButtonClicked() {
-  shoppingCartItemsContainer.innerHTML = '';
-  updateShoppingCartTotal();
-}
+  function comprarButtonClicked() {
+    shoppingCartItemsContainer.innerHTML = '';
+    updateShoppingCartTotal();
+  }
 
-
+});
 
 
 
