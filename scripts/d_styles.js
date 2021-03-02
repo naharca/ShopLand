@@ -1,5 +1,3 @@
-
-
 //SIGN IN
 //Styles with jQuery for submit button on Sign In section
 $(".welcoming-container").css("background-color", "White");

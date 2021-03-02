@@ -1,87 +1,66 @@
 [
     {
         "product_type": "T-Shirt",
-        "product_brand":"Showcase",
-        "product_fabric":"Cotton",
-        "product_price":"17",
-        "product_stock":"15",
-        "product_picture":"https://i.pinimg.com/236x/49/6a/8c/496a8c050d0a86d1cb7173d4123c40c4.jpg"
+        "product_brand": "Showcase",
+        "product_fabric": "Cotton",
+        "product_price": "17",
+        "product_stock": "15",
+        "product_picture": "https://i.pinimg.com/236x/49/6a/8c/496a8c050d0a86d1cb7173d4123c40c4.jpg"
     },
-
     {
         "product_type": "T-Shirt",
-        "product_brand":"Xtreme",
-        "product_fabric":"Cotton",
-        "product_price":"15",
-        "product_stock":"35",
-        "product_picture":"https://i.pinimg.com/236x/c2/e8/5b/c2e85bd243a2bff4b587726524470418.jpg"
-
-
-    },
-    
+        "product_brand": "Xtreme",
+        "product_fabric": "Cotton",
+        "product_price": "15",
+        "product_stock": "35",
+        "product_picture": "https://i.pinimg.com/236x/c2/e8/5b/c2e85bd243a2bff4b587726524470418.jpg"
+    },  
     {
         "product_type": "Jean",
-        "product_brand":"Comfy Jeans",
-        "product_fabric":"Denim",
-        "product_price":"25",
-        "product_stock":"10",
-        "product_picture":"https://i.pinimg.com/236x/07/41/ee/0741eed21386e0a53895b3f66e224eed.jpg"
-
-
+        "product_brand": "Comfy Jeans",
+        "product_fabric": "Denim",
+        "product_price": "25",
+        "product_stock": "10",
+        "product_picture": "https://i.pinimg.com/236x/07/41/ee/0741eed21386e0a53895b3f66e224eed.jpg"
     },
-
     {
         "product_type": "Pants",
-        "product_brand":"Urban Wear",
-        "product_fabric":"Denim",
-        "product_price":"35",
-        "product_stock":"15",
-        "product_picture":"https://img.freepik.com/fotos-gratis/os-detalhes-de-tecido-jeans-azul_150588-31.jpg?size=360&ext=jpg&ga=GA1.2.752612025.1608681600"
-
+        "product_brand": "Urban Wear",
+        "product_fabric": "Denim",
+        "product_price": "35",
+        "product_stock": "15",
+        "product_picture": "https://img.freepik.com/fotos-gratis/os-detalhes-de-tecido-jeans-azul_150588-31.jpg?size=360&ext=jpg&ga=GA1.2.752612025.1608681600"
     },
-
     {
         "product_type": "Skirt",
-        "product_brand":"Levis",
-        "product_fabric":"Organic Leather",
-        "product_price":"20",
-        "product_stock":"16",
-        "product_picture":"https://i.pinimg.com/236x/f2/6f/61/f26f61b72d0e9768fdcaf44f2999c12a.jpg"
+        "product_brand": "Levis",
+        "product_fabric": "Organic Leather",
+        "product_price": "20",
+        "product_stock": "16",
+        "product_picture": "https://i.pinimg.com/236x/f2/6f/61/f26f61b72d0e9768fdcaf44f2999c12a.jpg"
     },
-    
     {
         "product_type": "Dress",
-        "product_brand":"Talt",
-        "product_fabric":"SIlk",
-        "product_price":"52",
-        "product_stock":"6",
-        "product_picture":"https://i.pinimg.com/236x/a4/4b/1f/a44b1fe26d510a87e02fb64269d30d31.jpg"
-
-
-
-    },
-
-    {
-        "product_type": "Jacket",
-        "product_brand":"Bomb",
-        "product_fabric":"Mixed",
-        "product_price":"40",
-        "product_stock":"3",
-        "product_picture":"https://i.pinimg.com/236x/7a/ff/ef/7affeff3c66b28d23343f7ade96e1136.jpg"
-
+        "product_brand": "Talt",
+        "product_fabric": "SIlk",
+        "product_price": "52",
+        "product_stock": "6",
+        "product_picture": "https://i.pinimg.com/236x/a4/4b/1f/a44b1fe26d510a87e02fb64269d30d31.jpg"
     },
     {
         "product_type": "Jacket",
-        "product_brand":"Awesome",
-        "product_fabric":"Leather",
-        "product_price":"40",
-        "product_stock":"12",
-        "product_picture":"https://i.pinimg.com/236x/04/16/03/041603c21dabc8b6d576c16c334f172b.jpg"
-
-        
+        "product_brand": "Bomb",
+        "product_fabric": "Mixed",
+        "product_price": "40",
+        "product_stock": "3",
+        "product_picture": "https://i.pinimg.com/236x/7a/ff/ef/7affeff3c66b28d23343f7ade96e1136.jpg"
+    },
+    {
+        "product_type": "Jacket",
+        "product_brand": "Awesome",
+        "product_fabric": "Leather",
+        "product_price": "40",
+        "product_stock": "12",
+        "product_picture": "https://i.pinimg.com/236x/04/16/03/041603c21dabc8b6d576c16c334f172b.jpg"       
     }
-
-
-
-
 ]

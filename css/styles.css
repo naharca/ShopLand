@@ -134,15 +134,6 @@ p {
 
 /*Navbar*/
 
-/* #counter{
- border: none;
- background: transparent;
- color: wheat;
- margin: 0;
- padding: 0;
- font-size: 15px;
-} */
-
 .navbar {
   height: 6rem;
 }
@@ -264,6 +255,16 @@ input {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/*Cart checkout*/
+
+.card-general-form {
+  background-color: transparent;
+}
+
+.checkout-button {
+  margin: 0 0 0 15rem;
+}
+
 /*SIGN IN SECTION*/
 /* Contact Form*/
 .contact-form {
@@ -275,19 +276,3 @@ input {
 }
 
 /*Contact Form*/
-
-/*Modal total btn Store*/
-/* .hide {
-  display: none;
-}
-
-.show {
-  display: block;
-} */
-/*Modal*/
-/* .modal-bottom-footer {
-  display: flex;
-    align-items: center;
-} */
-/*Modal*/
-/*STORE SECTION*/
