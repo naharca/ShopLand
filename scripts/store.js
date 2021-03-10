@@ -1,15 +1,22 @@
 $(document).ready(function () {
     generateDB();
 });
-let cart = [];
 
-// Storage Validation
+// 2. Guardar y obtener la lista del local storage
 
-if (localStorage.getItem("cart") != null) {
-    let cartValues = JSON.parse(localStorage.getItem("cart"));
-    cart = cartValues;
+// Storage Validation---rhacer de nuevo
+// let cart = [];
 
-}
+// if (localStorage.getItem('cart') != null) {
+//     let cartValues = JSON.parse(localStorage.getItem('cart'));
+//     cart = cartValues;
+
+// }
+
+// function addToCartClicked() {
+//     localStorage.setItem("cart", JSON.stringify(cart));
+// }
+
 // Storage Validation
 
 //Constructor
@@ -46,8 +53,11 @@ function generateDB() {
         dataBase = data;
         for (let i = 0; i < dataBase.length; i++) {
             add2DB(i);
+
         }
     });
+
+
 }
 
 //Add to the Cart Function
@@ -71,5 +81,14 @@ function add2DB(i) {
     </div>
     </div>
     `;
+
+
     $("#products").html(aux);
+
+
+
 }
+
+
+
+

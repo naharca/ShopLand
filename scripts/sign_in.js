@@ -1,3 +1,49 @@
+let email =[];
+    password=[];
+    adress = [];
+    adress2 = [];
+    city = [];
+    zip = [];
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //no debe haber alertas en el proyecto final
 // let inputPassword = $("#password-validation");

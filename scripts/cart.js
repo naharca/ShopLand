@@ -1,7 +1,7 @@
 // OJO LOCAL STORAGE
+let cart = [];
+
 //Adding Element to shopping cart
-
-
 
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach((addToCartButton) => {
@@ -19,13 +19,34 @@ function addToCartClicked(i) {
   const itemPrice = dataBase[i].product_price;
 
   addItemToShoppingCart(itemImage, itemTitle, itemPrice);
+
+  addItemToLocalStorage(dataBase[i]);
+}
+//Sending client selectionn to LocalStorage
+function addItemToLocalStorage(objeto) {
+  if (localStorage.getItem("dataCart") == null) {
+    localStorage.setItem("dataCart", JSON.stringify(objeto));
+    
+
+  } else {
+    let dataStorage = localStorage.getItem("dataCart");
+    dataStorage = dataStorage + JSON.stringify(objeto);
+    localStorage.setItem("dataCart", dataStorage);
+
+  }
+
 }
 
 
+
+
+
+//adding item to shopping cart
 function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
   const elementsTitle = $(
     '.shoppingCartItemTitle'
   );
+
   for (let i = 0; i < elementsTitle.length; i++) {
     if (elementsTitle[i].innerText === itemTitle) {
       let elementQuantity = elementsTitle[
@@ -90,7 +111,12 @@ function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
     .addEventListener('change', quantityChanged);
 
   updateShoppingCartTotal();
+
+
+
+
 }
+
 // updating shoping cart total when add a product
 
 function updateShoppingCartTotal() {
@@ -137,6 +163,11 @@ function comprarButtonClicked() {
 }
 
 
+// processPurchase(e){
+//   e.preventDefault();
+//   location.href = ""
+
+// }
 
 
 
@@ -144,32 +175,3 @@ function comprarButtonClicked() {
 
 
 
-
-
-
-
-// // aplicando Jquery//
-// $(document).ready(function () {
-//   $(".new-style").hover(function () {
-//     $(this).css("background-color", "grey");
-//   });
-
-//   $("#sampleCard").click(function () {
-//     $(this).css("margin", "30rem");
-//   });
-
-//   $(".button-1").click(function () {
-//     $(this).css("background-color", "red");
-
-//   });
-
-//   $(".button-2").focus(function () {
-//     $(this).hide(".button-2");
-//   });
-
-//   $(".my-title").offset(function () {
-//     $(this).css("margin-top", "10rem");
-//   });
-
-
-// });
