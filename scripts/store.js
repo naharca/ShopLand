@@ -60,7 +60,6 @@ function generateDB() {
 
 }
 
-//Add to the Cart Function
 //Generation of HTML div store called with JS - product cards
 let aux = ``;
 function add2DB(i) {
@@ -82,7 +81,7 @@ function add2DB(i) {
     </div>
     `;
 
-
+ //showing products cards on store section 
     $("#products").html(aux);
 
 

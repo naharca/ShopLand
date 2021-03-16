@@ -212,6 +212,7 @@ p {
 }
 /*Cards*/
 
+/*STORE*/
 /*List Groups*/
 
 .list-group-item {
@@ -230,8 +231,9 @@ p {
   box-shadow: 0.3rem 0.3rem rgba(117, 110, 110, 0.253);
 }
 /*List Groups*/
+/*STORE*/
 
-/*SHOPPING CART*/
+/*SHOPPING CART MODAL*/
 .table td {
   border-top: none;
 }
@@ -247,7 +249,7 @@ input {
 }
 .p-total {
   margin-bottom: 1rem;
-  color: rgba(165, 42, 42, 0.63);
+  color: rgba(165, 42, 42, 0.747);
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
@@ -255,8 +257,7 @@ input {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/*Cart checkout*/
-
+/*CART CHECKOUT*/
 .card-general-form {
   background-color: transparent;
 }
@@ -272,7 +273,7 @@ input {
 }
 
 .submit-button {
-  margin: 1.5rem 25rem;
+  margin: 1.5rem 29rem;
 }
 
 /*Contact Form*/

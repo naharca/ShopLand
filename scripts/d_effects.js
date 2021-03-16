@@ -9,15 +9,7 @@ $(document).ready(function () {
 
     });
 
-    // $("#submitButton").click(function () {
-    //     $("form").hide();
-    // });
-
-    // $("#submitButton").click(function(){
-    //     $(".welcoming-container").show();
-
-    // });
-
+   
 });
-//SIGN IN
+
 

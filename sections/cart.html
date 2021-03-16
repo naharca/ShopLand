@@ -315,8 +315,11 @@
                   </div>
                 </div>
                 <hr class="mb-4" />
-                <button class="btn btn-primary btn-lg checkout-button" type="submit">
-                  Continue to checkout
+                <button
+                  class="btn btn-primary btn-lg checkout-button"
+                  type="submit"
+                >
+                  Finish Purchase
                 </button>
               </form>
             </div>
@@ -327,38 +330,19 @@
           <!--Grid column-->
           <div class="col-md-4 mb-4">
             <!-- Heading -->
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="d-flex justify-content-between align-items-center mb-3">
               <span class="text-muted">Your cart</span>
-              <span class="badge badge-secondary badge-pill">2</span>
-            </h4>
+            </h3>
 
-            <!-- Cart -->
-            <ul class="list-group mb-3 z-depth-1">
-              <li
-                class="list-group-item d-flex justify-content-between lh-condensed"
-              >
-                <div>
-                  <h6 class="my-0">Product name</h6>
-                  <small class="text-muted">Brief description</small>
-                </div>
-                <span class="text-muted">$12</span>
-              </li>
-              <li
-                class="list-group-item d-flex justify-content-between lh-condensed"
-              >
-                <div>
-                  <h6 class="my-0">Second product</h6>
-                  <small class="text-muted">Brief description</small>
-                </div>
-                <span class="text-muted">$8</span>
-              </li>
-
+            <!-- Cart on Checkout -->
+            <div id="checkout"></div>
+            
               <li class="list-group-item d-flex justify-content-between">
-                <span>Total (USD)</span>
-                <strong>$20</strong>
+                <strong class="checkoutPrice">$ TOTAL</strong>
+                <strong class="checkoutCartTotal">$</strong>
               </li>
-            </ul>
-            <!-- Cart -->
+            
+            <!-- Cart on Checkout -->
           </div>
           <!--Grid column-->
         </div>
@@ -366,8 +350,6 @@
       </div>
     </main>
     <!--Main layout-->
-
-    
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">

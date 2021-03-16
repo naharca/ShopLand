@@ -1,7 +1,7 @@
-// OJO LOCAL STORAGE
 let cart = [];
 
-//Adding Element to shopping cart
+
+//Adding element to shopping cart
 
 const addToShoppingCartButtons = document.querySelectorAll('.addToCart');
 addToShoppingCartButtons.forEach((addToCartButton) => {
@@ -13,32 +13,38 @@ const shoppingCartItemsContainer = document.querySelector(
   '.shoppingCartItemsContainer'
 );
 
-function addToCartClicked(i) {
-  const itemImage = dataBase[i].product_picture;
-  const itemTitle = dataBase[i].product_type;
-  const itemPrice = dataBase[i].product_price;
+
+function addToCartClicked(item) {
+  const itemImage = dataBase[item].product_picture;
+  const itemTitle = dataBase[item].product_type;
+  const itemPrice = dataBase[item].product_price;
+
+  //Local Storage request
+  const jsonStorage = localStorage.getItem("dataCart");
+  const storageList = JSON.parse(jsonStorage);
+
+  if (storageList) {
+    addItemToLocalStorage([...storageList, dataBase[item]]);
+
+  } else {
+    addItemToLocalStorage([dataBase[item]]);
+  }
 
   addItemToShoppingCart(itemImage, itemTitle, itemPrice);
 
-  addItemToLocalStorage(dataBase[i]);
 }
-//Sending client selectionn to LocalStorage
+
+//Sending client selection to LocalStorage
 function addItemToLocalStorage(objeto) {
   if (localStorage.getItem("dataCart") == null) {
     localStorage.setItem("dataCart", JSON.stringify(objeto));
-    
 
   } else {
-    let dataStorage = localStorage.getItem("dataCart");
-    dataStorage = dataStorage + JSON.stringify(objeto);
-    localStorage.setItem("dataCart", dataStorage);
-
+    let newDataStorage = JSON.stringify(objeto);
+    localStorage.setItem("dataCart", newDataStorage);
   }
 
 }
-
-
-
 
 
 //adding item to shopping cart
@@ -59,7 +65,7 @@ function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
     }
   }
 
-  //Generation of HTML div cart called from JS document 
+  //Generation of HTML cart div cart called from JS document 
   const shoppingCartRow = document.createElement('div');
   const shoppingCartContent = `
     <div class="row shoppingCartItem">
@@ -96,9 +102,6 @@ function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
 
     </div>`;
 
-
-
-
   shoppingCartRow.innerHTML = shoppingCartContent;
   shoppingCartItemsContainer.append(shoppingCartRow);
 
@@ -110,14 +113,12 @@ function addItemToShoppingCart(itemImage, itemTitle, itemPrice,) {
     .querySelector('.shoppingCartItemQuantity')
     .addEventListener('change', quantityChanged);
 
+  //Calling the updated shopping cart total
   updateShoppingCartTotal();
-
-
-
 
 }
 
-// updating shoping cart total when add a product
+//Totalizer function & updating shopping cart total when a product has been added to the shopping cart
 
 function updateShoppingCartTotal() {
   let total = 0;
@@ -139,8 +140,12 @@ function updateShoppingCartTotal() {
       shoppingCartItemQuantityElement.value
     );
     total = total + shoppingCartItemPrice * shoppingCartItemQuantity;
+
+
   });
   shoppingCartTotal.innerHTML = `${total.toFixed(2)}$`;
+
+
 }
 
 //Removoing an item from the cart 
@@ -163,11 +168,8 @@ function comprarButtonClicked() {
 }
 
 
-// processPurchase(e){
-//   e.preventDefault();
-//   location.href = ""
 
-// }
+
 
 
 
