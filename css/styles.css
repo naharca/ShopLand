@@ -201,6 +201,14 @@ p {
   box-shadow: 0.3rem 0.3rem rgba(117, 110, 110, 0.39);
 }
 
+.products-container {
+  margin: 0;
+}
+
+.cards-container {
+  margin: 0 3rem 0 3rem;
+}
+
 /*Jumbotron Store*/
 
 /*Cards*/
@@ -268,8 +276,9 @@ input {
 
 /*SIGN IN SECTION*/
 /* Contact Form*/
-.contact-form {
-  margin: 15rem;
+
+.form-container {
+  margin: 15rem 0 3rem;
 }
 
 .submit-button {
